@@ -1,11 +1,11 @@
 import {SET_SORT_BY, SET_CATEGORY} from '../actionTypes'
 
-const setSortBy = name => ({
+export const setSortBy = ({type, order}) => ({
   type: SET_SORT_BY,
-    payload: name
+    payload: {type, order}
 })
 
-const setCategory = categoryIndex => ({
+export const setCategory = categoryIndex => ({
   type: SET_CATEGORY,
   payload: categoryIndex
 })
