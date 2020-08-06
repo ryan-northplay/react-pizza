@@ -6,7 +6,7 @@ const Button = ({onClick, className, outline, children}) => {
   return (
     <button
       onClick={onClick}
-      className={classNames('button', {
+      className={classNames('button', className, {
       'button-outline': outline,
     })}
     >
