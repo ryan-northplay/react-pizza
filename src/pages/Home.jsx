@@ -3,7 +3,6 @@ import {Categories, SortPopup, PizzaLoadingBlock, PizzaBlock} from "../component
 import {useDispatch, useSelector} from "react-redux";
 import {setCategory, setSortBy} from '../redux/actions/filters'
 import {fetchPizzas} from "../redux/actions/pizzas";
-import {addPizzaToCart} from '../redux/actions/cart'
 import {ADD_PIZZA_CART} from "../redux/actionTypes";
 
 const categoryNames = [
@@ -35,16 +34,16 @@ const Home = () => {
     //     dispatch(setPizzas(data.pizzas))
     //   })
     // }, [])
-  }, [category, sortBy])
+  }, [category, sortBy, dispatch])
 
 
   const onSelectCategory = useCallback(index => {
     dispatch(setCategory(index))
-  }, [])
+  }, [dispatch])
 
   const onSelectSortType = useCallback(type => {
     dispatch(setSortBy(type))
-  }, [])
+  }, [dispatch])
 
   const handleAddPizzaToCart = obj => {
     dispatch({

@@ -1,23 +1,20 @@
 import React from 'react'
-import {Switch, Route} from 'react-router'
+import {Route} from 'react-router'
 
 import {Header} from './components'
 import {Home, Cart} from "./pages";
 
 
 function App() {
-
   return (
     <div className="wrapper">
       <Header />
       <div className="content">
-        <Switch>
-          <Route path="/" component={Home} />} exact />
-          <Route path="/cart" component={Cart} />
-        </Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/cart" component={Cart} exact />
       </div>
     </div>
-  )
+  );
 }
 
 export default App

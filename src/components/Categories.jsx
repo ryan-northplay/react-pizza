@@ -1,6 +1,6 @@
 // import React, {Component} from 'react'
 import React, {memo} from 'react'
-import PropTypes, {oneOf} from "prop-types";
+import PropTypes from "prop-types";
 
 const Categories = memo(function Categories({activeCategory, items, onClickCategory}) {
 
