@@ -9,6 +9,7 @@ const initialState = {
 }
 
 const filtersReducer = (state = initialState, action) => {
+  console.log('action.payload', action.payload)
   switch (action.type) {
     case SET_SORT_BY:
       return {
@@ -18,7 +19,7 @@ const filtersReducer = (state = initialState, action) => {
     case SET_CATEGORY:
       return {
         ...state,
-        category: action.payload,
+        category: action.payload
       }
     default:
       return state

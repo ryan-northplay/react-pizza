@@ -20,6 +20,7 @@ const sortItems = [
 
 const Home = () => {
   const dispatch = useDispatch()
+  // const items = useSelector(({pizzasReducer}) => pizzasReducer.items.pizzas)
   const items = useSelector(({pizzasReducer}) => pizzasReducer.items)
   const cartItems = useSelector(({cartReducer}) => cartReducer.items)
   const isLoaded = useSelector(({pizzasReducer}) => pizzasReducer.isLoaded)
@@ -27,7 +28,9 @@ const Home = () => {
   // const {items} = useSelector(({pizzasReducer}) => ({
   //   items: pizzasReducer.items
   // }))
-
+  console.log('[Home][items]', items)
+  console.log('[Home][cartItems]', cartItems)
+  console.log('[Home][category, sortBy]', category, sortBy)
   useEffect(() => {
       dispatch(fetchPizzas(sortBy, category))
     //   axios.get('http://localhost:3000/db.json').then (({data}) => {
